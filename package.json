@@ -1,0 +1,75 @@
+{
+  "name": "@zhadev/dramabox",
+  "version": "0.0.1",
+  "description": "Unofficial Dramabox Scrapers.",
+  "main": "dist/cjs/Dramabox.js",
+  "module": "dist/esm/Dramabox.js",
+  "types": "dist/types/Dramabox.d.ts",
+  "browser": "dist/javascript/browser.js",
+  "unpkg": "dist/javascript/browser.min.js",
+  "jsdelivr": "dist/javascript/browser.min.js",
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "npm run clean && npm run build:types && npm run build:cjs && npm run build:esm && npm run build:browser",
+    "build:types": "tsc --declaration --emitDeclarationOnly --outDir dist/types",
+    "build:cjs": "tsc --module commonjs --target es2020 --outDir dist/cjs",
+    "build:esm": "tsc --module es2020 --target es2020 --outDir dist/esm",
+    "build:browser": "npm run build:browser:dev && npm run build:browser:prod",
+    "build:browser:dev": "esbuild src/Dramabox.ts --bundle --platform=node --target=es2020 --outfile=dist/javascript/browser.js --global-name=DramaboxScraper",
+    "build:browser:prod": "esbuild src/Dramabox.ts --bundle --platform=node --target=es2020 --minify --outfile=dist/javascript/browser.min.js --global-name=DramaboxScraper",
+    "clean": "rimraf dist",
+    "test": "npm run build",
+    "prepublishOnly": "npm run build && npm test",
+    "lint": "eslint src/**/*.ts",
+    "format": "prettier --write \"src/**/*.ts\""
+  },
+  "keywords": [
+    "dramabox",
+    "dracin",
+    "scraper",
+    "anime",
+    "parser",
+    "api",
+    "typescript",
+    "zhadevv"
+  ],
+  "author": "zhadevv",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhadevv/dramabox.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zhadevv/dramabox/issues"
+  },
+  "homepage": "https://github.com/zhadevv/dramabox#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.51.0",
+    "@typescript-eslint/parser": "^8.51.0",
+    "axios": "^1.13.2",
+    "cheerio": "^1.1.2",
+    "https-proxy-agent": "^7.0.6",
+    "node-cache": "^5.1.2",
+    "socks-proxy-agent": "^8.0.5"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.9.36",
+    "@types/cheerio": "^0.22.35",
+    "esbuild": "^0.27.2",
+    "eslint": "^9.39.2",
+    "prettier": "^3.7.4",
+    "rimraf": "^6.1.2",
+    "typescript": "^5.9.3"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

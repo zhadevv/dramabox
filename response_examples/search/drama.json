@@ -1,0 +1,23 @@
+{
+  "success": true,
+  "creator": "zhadevv",
+  "data": {
+    "isMore": false,
+    "book": [
+      {
+        "id": "41000113521",
+        "name": "Office Drama Turned Survival Game",
+        "cover": "https://hwztchapter.dramaboxdb.com/data/cppartner/4x1/41x0/410x0/41000113521/41000113521.jpg?t=1742195663502&image_process=resize,h_300",
+        "introduction": "Edith Steele, known as \"Patient Zero,\" is the most feared figure in the psychiatric hospital. Upon her release, she secures a job at Transworld Healthcare, only to encounter workplace bullies. Refusing to back down, Edith fights back, standing her ground. ",
+        "tags": [
+          "Strong-Willed",
+          "Modern",
+          "Strong Heroine"
+        ],
+        "playCount": "1M"
+      }
+    ]
+  },
+  "metadata": {},
+  "message": null
+}
