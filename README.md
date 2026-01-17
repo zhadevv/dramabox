@@ -28,6 +28,7 @@ yarn add @zhadev/dramabox
 
 # pnpm
 pnpm add @zhadev/dramabox
+```
 
 ### Quick Start
 
